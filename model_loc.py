@@ -30,7 +30,7 @@ with open('C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance\Attendance\At
     for row in reader_obj:
         if row != []:
           names.append(row[0])
-
+#
 names = ["ramesh", "uma"]
 details = []
 final = []

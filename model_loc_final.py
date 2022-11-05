@@ -17,7 +17,7 @@ import numpy as np
 st.title("SHASWATH")
 st.write("An elegant data driven career guidance system to suit the job hunting needs of Agniveers, after their service periods.")
 
-df = pd.read_csv(r"C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance.csv")
+df = pd.read_csv(r"C:\\Users\\nisha\\OneDrive\\Desktop\\projects\\LOC\\Attendance.csv")
 (rows,cols) = df.shape
 print(rows)
 print(cols)
@@ -25,7 +25,7 @@ print(cols)
 names = []
 import csv
 
-with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance.csv') as file_obj:
+with open(r'C:\\Users\\nisha\\OneDrive\\Desktop\\projects\\LOC\\Attendance.csv') as file_obj:
 
     heading = next(file_obj)
       
@@ -33,20 +33,26 @@ with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance.csv') as fil
 
     for row in reader_obj:
         if row != []:
-          names.append(row[0])
+          names.append(row[0].upper())
 
-names = ["ramesh", "uma"]
+
 details = []
-final = []
+details_final = []
+det = []
 for i in names:
   with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Agniveer_Dataset_test.csv') as file_obj:
-    heading = next(file_obj)#
+    heading = next(file_obj)
     reader_obj = csv.reader(file_obj)
     for row in reader_obj:
       if row[0] == str(i):
-        details.append(row[2:])
+        details = row[2:]
+print(details)
+for i in range (len(details)):
+  details_final.append(float(details[i]))
+det.append(details_final)
 
-det=[[21, 64, 169, 118, 23, 10, 22, 86, 8, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0]] #
+
+#det=[[21, 64, 169, 118, 23, 10, 22, 86, 8, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0]] #
 
 st.metric("Age",det[0][0])
 st.metric("Weight",det[0][1])
