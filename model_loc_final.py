@@ -123,7 +123,7 @@ if st.button(label="JOB Suggestions"):
 
         fin =""
         for i in jobs:
-          fin=fin+"    "+i+",    "
-        st.success(fin)
+          fin=fin+i+", "
+        st.success(fin[:len(fin)-2])
 
 
