@@ -17,7 +17,7 @@ import numpy as np
 st.title("SHASWATH")
 st.write("An elegant data driven career guidance system to suit the job hunting needs of Agniveers, after their service periods.")
 
-df = pd.read_csv(r"C:\\Users\\nisha\\OneDrive\\Desktop\\projects\\LOC\\Attendance.csv")
+df = pd.read_csv("Attendance.csv")
 (rows,cols) = df.shape
 print(rows)
 print(cols)
@@ -25,7 +25,7 @@ print(cols)
 names = []
 import csv
 
-with open(r'C:\\Users\\nisha\\OneDrive\\Desktop\\projects\\LOC\\Attendance.csv') as file_obj:
+with open('Attendance.csv') as file_obj:
 
     heading = next(file_obj)
       
@@ -40,7 +40,7 @@ details = []
 details_final = []
 det = []
 for i in names:
-  with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Agniveer_Dataset_test.csv') as file_obj:
+  with open('Agniveer_Dataset_test.csv') as file_obj:
     heading = next(file_obj)
     reader_obj = csv.reader(file_obj)
     for row in reader_obj:
