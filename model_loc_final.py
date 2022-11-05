@@ -17,7 +17,7 @@ import numpy as np
 st.title("SHASWATH")
 st.write("An elegant data driven career guidance system to suit the job hunting needs of Agniveers, after their service periods.")
 
-df = pd.read_csv(r"C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance\Attendance\Attendance.csv")
+df = pd.read_csv(r"C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance.csv")
 (rows,cols) = df.shape
 print(rows)
 print(cols)
@@ -25,7 +25,7 @@ print(cols)
 names = []
 import csv
 
-with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance\Attendance\Attendance.csv') as file_obj:
+with open(r'C:\Users\nisha\OneDrive\Desktop\projects\LOC\Attendance.csv') as file_obj:
 
     heading = next(file_obj)
       
